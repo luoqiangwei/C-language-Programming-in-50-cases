@@ -1,9 +1,20 @@
 #include <stdio.h>
-// 若有定义:int a=7;float x=2.5,y=4.7; 则表达式
-// x+a%3*(int)(x+y)%2/4 的值是（结果保留两位小数）
+// 以下程序的输出结果是
+// #include <stdio.h>
+// void main()
+// {
+// unsigned char a,b;
+// a=0x0a|3;
+// b=0x0a&3;
+// printf("%d %d\n",a,b);
+// }
 
 int main(int argc, char* argv[])
 {
-    
+    unsigned char a, b;
+    a = 0x0a | 3;
+    b = 0x0a & 3;
+    // 11 2
+    printf ("%d %d\n", a, b);
     return 0;
 }
