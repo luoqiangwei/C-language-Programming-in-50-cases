@@ -4,5 +4,5 @@
         "stdio.h": "c",
         "conio.h": "c",
         "windows.h": "c"
-    }
+    },
 }

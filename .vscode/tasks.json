@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=gbk",
+                "\"${file}\"",
+                "-o",
+                "\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+            ],
+        }
+    ]
+}
