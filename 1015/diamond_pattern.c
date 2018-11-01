@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
     int in = 0;
     if(argc > 1)
     {
-        in = strtod(argv[1], NULL);
+        in = strtol(argv[1], NULL, 10);
     }
     else
     {
