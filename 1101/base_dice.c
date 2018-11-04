@@ -2,7 +2,11 @@
 
 int main(int argc, char *argv[])
 {
-    
+    const int sz[] = {1, 4, 2, 5, 3, 6};
+    int n = 0;
+    int m = 0;
+    scanf("%d%d", &n, &m);
+
 
     return 0;
 }
