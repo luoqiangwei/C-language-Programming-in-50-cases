@@ -1,285 +1,81 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <math.h>
 
-void zero();
-void one();
-void two();
-void three();
-void four();
-void five();
-void six();
-void seven();
-void eight();
-void nine();
-
-int main(int argc, char *argv[])
+int main()
 {
-    int a[12];
-    int i = 0;
-    int j = 0;
-    printf("Please input the numbers:");
-    for (i = 0; i < 12; i++)
-    {
-        scanf("%d", &a[i]);
-    }
+    int n, a, b, c, i;
+    char m;
+    bool z = 1;
 
-    for (j = 0; j < 5; j++)
+    while (z)
     {
-        for (i = 0; i < 12; i++)
+        if ('Y' == m || 'y' == m)
+            z = 1;
+
+        fflush(stdin); //使stdin输入流由默认缓冲区转为无缓冲区
+        if ('N' == m || 'n' == m)
+            break;
+
+        srand((unsigned)time(NULL));
+        //0-100之间随机数
+        a = rand() % 100 + 1;
+        b = rand() % 100 + 1;
+
+        system("cls");
+        printf("***************\n");
+        printf("请选择运算符:\n");
+        printf("加法运算，请按1;\n");
+        printf("减法运算，请按2;\n");
+        printf("乘法运算，请按3;\n");
+        printf("除法运算，请按4;\n");
+        printf("***************\n");
+
+        scanf("%d", &n);
+        fflush(stdin); //使stdin输入流由默认缓冲区转为无缓冲区
+
+        if (n == 1)
         {
-            switch (a[i])
-            {
-            case 0:
-                zero(j);
-                break;
-            case 1:
-                one(j);
-                break;
-            case 2:
-                two(j);
-                break;
-            case 3:
-                three(j);
-                break;
-            case 4:
-                four(j);
-                break;
-            case 5:
-                five(j);
-                break;
-            case 6:
-                six(j);
-                break;
-            case 7:
-                seven(j);
-                break;
-            case 8:
-                eight(j);
-                break;
-            case 9:
-                nine(j);
-                break;
-            }
+            c = a + b;
+            printf("%d+%d= ", a, b);
+        }
+        if (n == 2)
+        {
+            c = a - b;
+            printf("%d-%d= ", a, b);
+        }
+        if (n == 3)
+        {
+            c = a * b;
+            printf("%d*%d= ", a, b);
+        }
+        if (n == 4)
+        {
+            c = a / b;
+            printf("%d/%d= ", a, b);
+        }
+        printf("请输入运算后的答案\n");
+        scanf("%d", &i);
+        fflush(stdin); //使stdin输入流由默认缓冲区转为无缓冲区;//使stdin输入流由默认缓冲区转为无缓冲区
+        if (i == c)
+            printf("你很棒，加油！");
+        else if (i != c)
+        {
+            printf("很遗憾！");
         }
         printf("\n");
+        printf("是否继续答题?\n");
+        printf("继续请输入Y，退出请输入N\n");
+        printf("\n");
+        scanf("%c", &m);
+        fflush(stdin); //使stdin输入流由默认缓冲区转为无缓冲区
+        // getchar();
+
+        // if('Y' == m || 'y' == m) continue;
+        // fflush(stdin);//使stdin输入流由默认缓冲区转为无缓冲区
+        // if('N' == m || 'n' == m) z=0;
     }
-
-    // printf("The array is:");
-    // for(i=0;i<11;i++)
-    // {
-    // 	printf("%-2d",a[i]);
-
-    // }
-    // printf("");
+    // system("pause");
     return 0;
-}
-
-void zero(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("  # # ");
-        break;
-    case 2:
-        printf("  # # ");
-        break;
-    case 3:
-        printf("  # # ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
-}
-void one(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ##  ");
-        break;
-    case 1:
-        printf("   #  ");
-        break;
-    case 2:
-        printf("   #  ");
-        break;
-    case 3:
-        printf("   #  ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
-}
-void two(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("    # ");
-        break;
-    case 2:
-        printf("  ### ");
-        break;
-    case 3:
-        printf("  #   ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
-}
-void three(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("    # ");
-        break;
-    case 2:
-        printf("  ### ");
-        break;
-    case 3:
-        printf("    # ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
-}
-void four(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  # # ");
-        break;
-    case 1:
-        printf("  # # ");
-        break;
-    case 2:
-        printf("  ### ");
-        break;
-    case 3:
-        printf("    # ");
-        break;
-    case 4:
-        printf("    # ");
-        break;
-    }
-}
-void five(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("  #   ");
-        break;
-    case 2:
-        printf("  ### ");
-        break;
-    case 3:
-        printf("    # ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
-}
-void six(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("  #   ");
-        break;
-    case 2:
-        printf("  ### ");
-        break;
-    case 3:
-        printf("  # # ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
-}
-void seven(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("    # ");
-        break;
-    case 2:
-        printf("    # ");
-        break;
-    case 3:
-        printf("    # ");
-        break;
-    case 4:
-        printf("    # ");
-        break;
-    }
-}
-void eight(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("  # # ");
-        break;
-    case 2:
-        printf("  ### ");
-        break;
-    case 3:
-        printf("  # # ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
-}
-void nine(int i)
-{
-    switch (i)
-    {
-    case 0:
-        printf("  ### ");
-        break;
-    case 1:
-        printf("  # # ");
-        break;
-    case 2:
-        printf("  ### ");
-        break;
-    case 3:
-        printf("    # ");
-        break;
-    case 4:
-        printf("  ### ");
-        break;
-    }
 }
