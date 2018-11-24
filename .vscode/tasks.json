@@ -8,6 +8,7 @@
             "args": [
                 "-g",
                 "-fexec-charset=gbk",
+                "-std=c90",
                 "\"${file}\"",
                 "-o",
                 "\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
