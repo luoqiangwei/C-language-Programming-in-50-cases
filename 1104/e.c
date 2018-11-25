@@ -2,7 +2,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int i, j, tmp;
+    int i, j;
     int A[] = {1, 4, 8, 1, 9, 4, 0, 67, 23, 75};
     for(i = 1; i < sizeof A / sizeof(int); i++)
     {
@@ -10,9 +10,10 @@ int main(int argc, char const *argv[])
         {
             if(A[j] > A[j+1])
             {
-                A[j] ^= A[j+1];
+                /*A[j] ^= A[j+1];
                 A[j+1] ^= A[j];
-                A[j] ^= A[j+1];
+                A[j] ^= A[j+1];*/
+                A[j] ^= A[j+1] ^= A[j] ^= A[j+1];
             }
         }
     }
