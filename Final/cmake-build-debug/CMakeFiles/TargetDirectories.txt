@@ -1,3 +1,0 @@
-D:/Store/CAH/Creat/2018/C_CPP/CFigth/Final/cmake-build-debug/CMakeFiles/Final.dir
-D:/Store/CAH/Creat/2018/C_CPP/CFigth/Final/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Store/CAH/Creat/2018/C_CPP/CFigth/Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
